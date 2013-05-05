@@ -1,3 +1,5 @@
+This is a crude compilation of code from different projects with different formatting. hopefully in the next few days i can clean up the code, add more comments, and start adding more recent, better code.
+
 CGH_headers:
 	CGH_io.h:
 		this contains functions relating to output on the console window.
