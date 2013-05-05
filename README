@@ -1,0 +1,24 @@
+CGH_headers:
+	CGH_io.h:
+		this contains functions relating to output on the console window.
+		write(string or char, int x_position,int y_position,color Foreground = white, color Background = black)
+		setCursorSize(int 0-100) (less than or equal to 0 will hide)
+		setConsoleTitle(const char*)
+		
+		another function, resizeConsole(int x, int y) is also included, but to use you need to #define RESIZEWINDOW. beaware that it will change _WIN32_WINNT to 0x0500 (see msdn article)
+		
+	cgh_tools.h:
+		general code that is nice to have.
+		explode(string,char exploder) returns an array of strings, not good to use unless you have a known formatted string going in. as you have no way of knowing the returned length of the array.
+		explode_v(string, char exploder) same as above, but will return a vector, to remove any problems that explode could cause. use this over the first one.
+		startProcess(string path) starts a process
+		startProcessHidden(string path) same as above, but the console window will be hidden.
+		
+		also defines min(a,b) max(a,b) random(a,b).
+		
+	cgh_network_raw:
+		synchronous server / client code. it was created to demonstrate a "hello world" in winsock. feel free to use it, but its not anything special.
+		that being said, the server socket class has two nice functions, GetHostName() and GetLocalIP() both do exactly what you think they will.
+		
+	cgh_network_irc:
+		some irc code that is nice to have. the documentation is inside of the documentation folder.
